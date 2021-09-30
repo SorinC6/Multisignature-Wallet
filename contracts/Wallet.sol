@@ -32,12 +32,12 @@ contract Wallet {
 
     function createTransfer(uint256 amount, address payable to)
         external
-        onlyApproval
+        onlyApproval()
     {
         transfers.push(Transfer(transfers.length, amount, to, 0, false));
     }
 
-    function approveTransfers(uint256 id) external onlyApproval {
+    function approveTransfers(uint256 id) external onlyApproval() {
         require(
             transfers[id].sent == false,
             "Transfer was already approve for this id"
