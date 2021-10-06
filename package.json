@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@openzeppelin/test-helpers": "^0.5.13"
+    "@openzeppelin/test-helpers": "^0.5.13",
+    "web3": "^1.6.0"
   }
 }
