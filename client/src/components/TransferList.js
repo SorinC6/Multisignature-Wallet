@@ -1,6 +1,7 @@
 import React from 'react';
 
 const TransferList = ({ transfers, approveTransfer }) => {
+  console.log('transfers', transfers);
   return (
     <div>
       <h5>Transfers</h5>
@@ -21,7 +22,7 @@ const TransferList = ({ transfers, approveTransfer }) => {
               <td>{transfer.amount}</td>
               <td>{transfer.to}</td>
               <td>
-                {transfer.approvals}
+                {transfer.approvers}
                 <button onClick={() => approveTransfer(transfer.id)}>Approve</button>
               </td>
               <td>{transfer.sent ? 'yes' : 'no'}</td>
